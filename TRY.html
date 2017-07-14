@@ -1,186 +1,99 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html >
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Thinks</title>
-<style type="text/css">
-#apDiv1 {
-	position: absolute;
-	left: 0px;
-	top: 0px;
-	width: 980px;
-	height: 530px;
-	z-index: 1;
-}
-.Tatol {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 60px;
-	font-weight: bold;
-	text-align: center;
-	color: #FFFFFF;
-}
-.inheart {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 24px;
-	font-weight: bold;
-	list-style-type: disc;
-	line-height: 60px;
-	color: #FFFFFF;
-}
-#apDiv2 {
-	position: absolute;
-	left: 215px;
-	top: 278px;
-	width: 393px;
-	height: 257px;
-	z-index: 2;
-}
-#apDiv3 {
-	position: absolute;
-	left: 28px;
-	top: 18px;
-	width: 76px;
-	height: 25px;
-	z-index: 3;
-}
-#apDiv4 {
-	position: absolute;
-	left: 118px;
-	top: 611px;
-	width: 402px;
-	height: 26px;
-	z-index: 4;
-}
-#apDiv5 {
-	position: absolute;
-	left: 15px;
-	top: 19px;
-	width: 267px;
-	height: 51px;
-	z-index: 5;
-}
-a:link {
-	color: #FFFFFF;
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-a:hover {
-	text-decoration: none;
-	color: #E7C7A0;
-}
-a:active {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-#apDiv6 {
-	position: absolute;
-	left: 775px;
-	top: 266px;
-	width: 157px;
-	height: 300px;
-	z-index: 6;
-}
-#apDiv7 {
-	position: absolute;
-	left: 776px;
-	top: 201px;
-	width: 212px;
-	height: 51px;
-	z-index: 7;
-}
-.code1 {
-	font-size: 18px;
-	font-weight: bold;
-	color: #FFFFFF;
-}
-.address_under {
-	color: #FFFFFF;
-}
-#apDiv8 {
-	position: absolute;
-	left: 120px;
-	top: 197px;
-	width: 69px;
-	height: 45px;
-	z-index: 8;
-	visibility: hidden;
-}
-#apDiv9 {
-	position: absolute;
-	left: 168px;
-	top: 52px;
-	width: 537px;
-	height: 106px;
-	z-index: 8;
-}
-#apDiv10 {
-	position: absolute;
-	left: 111px;
-	top: 138px;
-	width: 27px;
-	height: 27px;
-	z-index: 9;
-	visibility: hidden;
-}
-#apDiv11 {
-	position: absolute;
-	left: 806px;
-	top: 30px;
-	width: 122px;
-	height: 58px;
-	z-index: 10;
-}
-.lognin {
-	font-size: 24px;
-	font-weight: bold;
-	text-align: center;
-	font-family: "微软雅黑";
-	color: #FFFFFF;
-}
-#apDiv12 {
-	position: absolute;
-	left: 71px;
-	top: 242px;
-	width: 159px;
-	height: 50px;
-	z-index: 11;
-}
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+	.address{
+		height:30px; text-align:left; border-bottom:1px solid #000000;
+	}
+	a{
+		color:#000000;
+		text-decoration:none;
+	}
+	a:hover{
+	    color:#E7C7A0;
+	}
+	.nav{
+	    position:fixed;
+		filter:alpha(Opacity=80); opacity: 0.9;
+		left:5%;
+		top:50%;
+		margin-top:-200px;
+		background-color:#ffffff;
+		width:250px;
+		height:400px;
+		text-align:center;
+	
+	}
+	h5{
+	    display:block;
+		position:relative;
+		margin-left:10px
+	    
+	}
+	.nav_inside{
+		position:absolute;
+		height:350px;
+		width:210px;
+		left:20px;
+		top:25px;
+	}
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=C9d386d45cac59c6de1fd1d579c5f15c"></script>
+<title></title>
 </head>
 
-<body background="{{url_for('static',filename="img//dsc004411.jpg")}}">
-<div class="inheart" id="apDiv2">
-  <ol>
-    <li>姓名：李松霖</li>
-    <li>学号：3150205226 </li>
-    <li>专业：15视觉文化与艺术管理</li>
-  </ol>
+<body>
+<div id="allmap"></div>
+<div class="nav" id="nav">
+<div style="position:absolute;  text-align:10px;margin-top:0px;margin-left:218px;width:30px;
+height:30px; z-index:16"><span id="close" style="display:block;position:absolute;top:50%;height:15px;margin-top:-10px;left:50%;margin-left:-6px;"><a href=''><b>X</b></a></span></div>
+    <div class="nav_inside">
+        <div style="border-bottom:1px solid #000000;position:relative;margin-top:0px">
+           <a href="/Taylor Swift.html"><h1>ZAYN</h1></a>
+        </div>
+        
+        <div style=" margin-top:0px; position:relative; line-height:1px"><h6 style="font-weight:500; border-bottom:1px solid #000000;height:20px;">forever&amp;ever</h6></div>
+        <div class="address"><h5>地址</h5></div>
+        <div>
+           <h5 style="text-align:left ;margin-top:0px;font-weight:500;"> 中国美术学院南山校区<br/><span style=" display:block;font-weight:200; font-size:13px; margin-top:10px;">艺术人文学院 15视觉文化</span></h5>
+        </div>
+        <div class="address"><h5>联系方式</h5></div>
+        <div style="text-align:left ;
+        margin-top:10px; font-weight:200; font-size:13px">
+ Mobile: 13208028653<br/>                               
+ <span style=" display:block;font-weight:200; font-size:13px; margin-top:10px;">E-mail：tomscavo960@hotmail</span></div>
+        
+    </div>
+    
+
 </div>
-<div class="address_under" id="apDiv4" >地 址 ：杭 州 市 上 城 区 中 国 美 术 学 院 南 山 校 区</div>
-<div class="inheart" id="apDiv5"><a href="aboutZAYN.html">ZAYN</a>|<a href="Taylor Swift.html">Taylor	Swfit</a></div>
-<div class="code1" id="apDiv6">private boolean Max(){<br />
-String WeiXin=readLine(“Max's number:&quot;);<br />
-String number=&quot;a982736481&quot; ;<br />
-if(WeiXin.equals(number)){<br />
-return(1);<br />
-} else{<br />
-return(0); }<br />
-}</div>
-<div class="inheart" id="apDiv7">4. 联系方式：</div>
-<div class="Tatol" id="apDiv9">
-  <p>Designed By</p>
-  <p></p>
-</div>
-<div id="apDiv10">
-<table width="100%" border="0">
-  <tr>
-    <td height="27" bgcolor="#FFFFFF"><embed src="{{url_for('static',filename="music//I'm the One.mp3")}}" width="27" height="27"></embed></td>
-  </tr>
-</table>
-</div>
-<div class="lognin" id="apDiv11"> <a href="LognIn">登录</a>/<a href="Register.html">注册</a></div>
+ 
 </body>
 </html>
+
+    <script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 6);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("杭州");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	var myGeo = new BMap.Geocoder();
+	myGeo.getPoint("中国美术学院南山校区", function (point) {
+	    if (point) {
+	        map.centerAndZoom(point, 15);
+	        map.addOverlay(new BMap.Marker(point));
+	    } else {
+	        alert("您选择地址没有解析到结果!");
+	    }
+	}, "杭州市");
+	
+	document.getElementById('close').onclick=function(e){
+	    e.preventDefault();
+		document.getElementById('nav').style.visibility="hidden";
+	}
+</script>
