@@ -351,8 +351,8 @@ a:link {
 <script>
 		 function bddnk(){
 			 var div=document.getElementById('apDiv4');
-			 if(div.style.visibiddty=='hidden'){
-				 div.style.visibiddty='visible';
+			 if(div.style.visibility=='hidden'){
+				 div.style.visibility='visible';
 				 }
 			 else
 			 {
@@ -398,8 +398,8 @@ var imgs_len=imgs.lengh;
 imgs.eq(0).fadeIn(100);
 
 function show(){
-	imgs.eq(num).stop(true,true).siblings().fadeOut(2000);
-	imgs.eq(num).stop(true,true).fadeIn(2000);
+	imgs.eq(num).siblings().fadeOut(2000);
+	imgs.eq(num).fadeIn(2000);
 	num++;
 	if(num==3){
 	    num=0;
