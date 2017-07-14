@@ -1,10 +1,415 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> </title>
-    </head>
-    <body>
-        <h1>Rabbit</h1>
-        <img src="rabbit.jpg" alt="rabbit"/>
-    </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="{{url_for('static',filename='jquery.js')}}"></script>
+
+<title>Taylor Swift</title>
+<style>
+.banner{
+z-index:1;
+margin-top:40px;
+
+}
+.banner li{
+display:none;
+position:absolute;
+
+}
+td a{
+	display:block;
+	width:90px;
+	border-right: 1px solid #F00;
+}
+.middem{
+    width:106px;
+}
+.A-ZAYN{
+	width:128px
+	}
+#list-music li a{
+	display:block;
+	height:46px;
+	}
+#list-music>li>a{
+
+	display:block;
+    float:left;
+}
+.ZAYN{
+	width:210px;
+}
+li{
+	list-style:none;
+   
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+span{
+	display:block;
+	margin-bottom:0px;
+}
+
+*{
+	margin:0;
+	border:0;
+	padding:0;
+	
+}
+p{
+	display:block;
+	height:12px;
+}
+.none-dl{
+	position: absolute;
+    display:none;
+	min-height:50px;
+	width:106px;
+	padding:21px 0px;
+	margin-top:45px;
+	border-top:2px solid #333333;
+	border-bottom:1px solid #F00;
+	z-index:1;	
+	
+}
+.aboutzayn-dl{
+	margin-left:271px;
+	width:126px;
+}
+.music-dl{
+	margin-left:400px;
+}
+.video-dl{
+	margin-left:508px;
+}
+.photos-dl{
+	margin-left:616px;
+}
+#list-music dd{
+   display:block;
+   height:30px;
+}
+
+#list-music a:hover + dl{
+    display:block;
+}
+#list-music dd a{
+	ddne-height:30px;
+	height:46px;
+  display: block;
+  text-addgn:center;
+}
+
+#list-music dl:hover{
+    display:block;
+}
+
+
+body{
+	background-color:#333333;
+	background-repeat:no-repeat;
+	
+}
+</style>
+<style type="text/css">
+#apDiv5 {
+	position: absolute;
+	left: 643px;
+	top: 83px;
+	width: 26px;
+	height: 21px;
+	z-index: 3;
+}
+
+#apDiv6 {
+	position: absolute;
+	left: 645px;
+	top: 80px;
+	width: 8px;
+	height: 24px;
+	z-index: 3;
+}
+.red {
+	visibiddty: hidden;
+}
+.href-color{
+	color:#FFFFFF;
+}
+#apDiv7 {
+	position: absolute;
+	left: 518px;
+	top: 130px;
+	width: 309px;
+	height: 105px;
+	z-index: 3;
+}
+#apDiv8 {
+	position: absolute;
+	left: 453px;
+	top: 138px;
+	width: 101px;
+	height: 35px;
+	z-index: 3;
+}
+.lognsign{
+    width:126px;
+}
+#apDiv9 {
+	position: absolute;
+	left: 335px;
+	top: 110px;
+	width: 93px;
+	height: 51px;
+	z-index: 3;
+}
+html,body{text-addgn:center} 
+a:hover {
+	color: #E7C7A0;
+}
+</style>
+
+<style type="text/css">
+#apDiv1 {
+	position: fixed;
+	top:0px;
+	width: 980px;
+	height: 46px;
+	z-index: 18;
+	margin:0 auto;
+	border-top:1px solid #FF0000;
+}
+.Tatol {
+	background-color:#000000;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 36px;
+	color: #FFF;
+	font-weight:bolder;
+	padding-left: 60px;
+	text-addgn: left;
+	filter:alpha(Opacity=80); opacity: 0.78;
+}
+.TatolCopy {
+	background-color:#000000;
+	border-left:2px solid #333333;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight:bolder;
+	color: #FFF;
+	text-addgn: center;
+	filter:alpha(Opacity=50); opacity: 0.78;
+}
+.TatolCopy1 {
+	background-color:#000000;
+	filter:alpha(Opacity=80); opacity: 0.78;
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight:bolder;
+	font-size: 17px;
+	color: #FFFFFF;
+	text-addgn: center;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	color: #E7C7A0;
+}
+a:active {
+	text-decoration: none;
+}
+#apDiv2 {
+	position: absolute;
+	left: 50%;
+	margin-left:-348px;
+	top: 1350px;
+	width: 697px;
+	height: 50px;
+	z-index: 2;
+}
+#apDiv3 {
+	position: absolute;
+	left: 54px;
+	top: 151px;
+	width: 443px;
+	height: 431px;
+	z-index: 2;
+}
+#apDiv4 {
+	position: absolute;
+	margin-left: 20px;
+	top: 199px;
+	width: 439px;
+	height: 97px;
+	z-index: 2;
+}
+.usicSingersM {	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	text-addgn: center;
+}
+.TaylorSwift {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 60px;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+#apDiv10 {
+	background:url(../static/img/8b45ed26f4436d0aa60021b103c65ada.jpg);
+	position: absolute;
+	top:700px;
+	width: 800px;
+	left:50%;
+	margin-left:-400px;
+	height: 600px;
+	z-index: 3;
+}
+.bottom {
+	font-size: 14px;
+	text-addgn: center;
+	color: #FFFFFF;
+}
+#apDiv11 {	position: absolute;
+	left: 280px;
+	top: 620px;
+	width: 415px;
+	height: 36px;
+	z-index: 3;
+}
+#apDiv12 {
+	position: absolute;
+	left: 80px;
+	top: 55px;
+	width: 162px;
+	height: 60px;
+	z-index: 4;
+}
+a:link {
+	text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+<div style=" position:relative;   border-bottom:1px solid #F00; text-align:center; margin:0 auto; width:980px;">
+    <div id="apDiv1">      
+          <ul id="list-music">
+                  <li>
+                  <a href="Index.html" class="Tatol ZAYN">ZAYN</a>
+              </li>
+              <li>
+                  <a href="aboutZAYN.html" class="TatolCopy A-ZAYN"><p></p>About ZAYN</a>
+                  <dl class="TatolCopy none-dl aboutzayn-dl" >
+                      <dd>music</dd>
+                      <dd>music</dd>
+                      <dd>music</dd>
+                  </dl>
+              </li>
+              <li>
+                  <a href="Music.html" class="TatolCopy middem"><p></p>Music</a>
+                  <dl class="TatolCopy none-dl music-dl" >
+                      <dd>music</dd>
+                      <dd>music</dd>
+                      <dd>music</dd>
+                  </dl>
+              </li>
+              <li>
+                  <a href="Video.html" class="TatolCopy middem"><p></p>Video</a>
+                  <dl class="TatolCopy none-dl video-dl">
+                      <dd>music</dd>
+                      <dd>music</dd>
+                      <dd>music</dd>
+                  </dl>
+              </li>
+              <li>
+                  <a href="Photos.html" class="TatolCopy middem"><p></p>Photos</a>
+                  <dl class="TatolCopy none-dl photos-dl" >
+                      <dd>music</dd>
+                      <dd>music</dd>
+                      <dd>music</dd>
+                  </dl>
+              </li>
+              <li>
+                  <a href="LognIn.html" class="TatolCopy lognsign"><p></p>
+                  <span>登录</span></a><a href="Register.html" class="TatolCopy lognsign">
+                  <p></p>注册</a>
+              </li>
+          
+          </ul>
+</div>
+<div class="banner">
+    <ul>
+        <li><img src="{{url_for('static',filename='img//1.jpg')}}"/></li>
+        <li><img src="{{url_for('static',filename='img//3.jpg')}}"/></li>
+        <li><img src="{{url_for('static',filename='img//4.jpg')}}"/></li>
+        <li><img src="{{url_for('static',filename='img//Taylor.jpg')}}"/></li>
+    </ul>
+</div>
+<div style="height:650px; border-bottom:1px  solid #F00;"></div>
+
+<div class="TaylorSwift" id="apDiv4"> <a href="{{url_for('static',filename='flv//Taylor Swift Live 2015.mp4')}}" class="TaylorSwift">Taylor Swift</a>
+</div>
+<script>
+		 function bddnk(){
+			 var div=document.getElementById('apDiv4');
+			 if(div.style.visibiddty=='hidden'){
+				 div.style.visibiddty='visible';
+				 }
+			 else
+			 {
+				 div.style.visibiddty='hidden';
+			 }
+		 }
+		 
+		 window.setInterval(bddnk,500);
+		 
+		 </script>
+<div id="apDiv10">
+    <embed src="{{url_for('static',filename='flv//Red.mp4')}}" width="800" height="600"></embed>
+</div>
+<div id="apDiv2">
+  <table width="100%" border="0">
+    <tr class="bottom">
+      <td class="bottom"><a href="TRY.html"  class="bottom">联系我们 </a></td>
+      <td class="bottom"><a href="TRY.html"  class="bottom">工作需求 </a></td>
+      <td class="bottom"><a href="TRY.html"  class="bottom">法律条例 </a></td>
+      <td class="bottom"><a href="TRY.html"  class="bottom">免责声明 </a></td>
+      <td class="bottom"><a href="TRY.html" class="bottom">版权归属 </a></td>
+    </tr>
+  </table>
+  
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var num=1;
+var imgs=$('.banner li');
+var imgs_len=imgs.lengh;
+imgs.eq(0).fadeIn(100);
+
+function show(){
+	imgs.eq(num).stop(true,true).siblings().fadeOut(2000);
+	imgs.eq(num).stop(true,true).fadeIn(2000);
+	num++;
+	if(num==3){
+	    num=0;
+	}
+}
+setInterval(show,4000);
+
+</script>
+</body>
 </html>
