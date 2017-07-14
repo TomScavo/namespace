@@ -1,23 +1,99 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 	<style type="text/css">
+	.address{
+		height:30px; text-align:left; border-bottom:1px solid #000000;
+	}
+	a{
+		color:#000000;
+		text-decoration:none;
+	}
+	a:hover{
+	    color:#E7C7A0;
+	}
+	.nav{
+	    position:fixed;
+		filter:alpha(Opacity=80); opacity: 0.9;
+		left:5%;
+		top:50%;
+		margin-top:-200px;
+		background-color:#ffffff;
+		width:250px;
+		height:400px;
+		text-align:center;
+	
+	}
+	h5{
+	    display:block;
+		position:relative;
+		margin-left:10px
+	    
+	}
+	.nav_inside{
+		position:absolute;
+		height:350px;
+		width:210px;
+		left:20px;
+		top:25px;
+	}
 	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
 	</style>
-	<script type="text/javascript" src="api.js"></script>
-	<title>地图展示</title>
+	<script type="text/javascript" src=api。js"></script>
+<title></title>
 </head>
+
 <body>
-	<div id="allmap"></div>
+<div id="allmap"></div>
+<div class="nav" id="nav">
+<div style="position:absolute;  text-align:10px;margin-top:0px;margin-left:218px;width:30px;
+height:30px; z-index:16"><span id="close" style="display:block;position:absolute;top:50%;height:15px;margin-top:-10px;left:50%;margin-left:-6px;"><a href=''><b>X</b></a></span></div>
+    <div class="nav_inside">
+        <div style="border-bottom:1px solid #000000;position:relative;margin-top:0px">
+           <a href="/Taylor Swift.html"><h1>ZAYN</h1></a>
+        </div>
+        
+        <div style=" margin-top:0px; position:relative; line-height:1px"><h6 style="font-weight:500; border-bottom:1px solid #000000;height:20px;">forever&amp;ever</h6></div>
+        <div class="address"><h5>地址</h5></div>
+        <div>
+           <h5 style="text-align:left ;margin-top:0px;font-weight:500;"> 中国美术学院南山校区<br/><span style=" display:block;font-weight:200; font-size:13px; margin-top:10px;">艺术人文学院 15视觉文化</span></h5>
+        </div>
+        <div class="address"><h5>联系方式</h5></div>
+        <div style="text-align:left ;
+        margin-top:10px; font-weight:200; font-size:13px">
+ Mobile: 13208028653<br/>                               
+ <span style=" display:block;font-weight:200; font-size:13px; margin-top:10px;">E-mail：tomscavo960@hotmail</span></div>
+        
+    </div>
+    
+
+</div>
+ 
 </body>
 </html>
-<script type="text/javascript">
+
+    <script type="text/javascript">
 	// 百度地图API功能
 	var map = new BMap.Map("allmap");    // 创建Map实例
-	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 6);  // 初始化地图,设置中心点坐标和地图级别
 	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.setCurrentCity("杭州");          // 设置地图显示的城市 此项是必须设置的
 	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	var myGeo = new BMap.Geocoder();
+	myGeo.getPoint("中国美术学院南山校区", function (point) {
+	    if (point) {
+	        map.centerAndZoom(point, 15);
+	        map.addOverlay(new BMap.Marker(point));
+	    } else {
+	        alert("您选择地址没有解析到结果!");
+	    }
+	}, "杭州市");
+	
+	document.getElementById('close').onclick=function(e){
+	    e.preventDefault();
+		document.getElementById('nav').style.visibility="hidden";
+	}
 </script>
