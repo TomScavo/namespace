@@ -37,7 +37,7 @@
 .banner{
 	height:653px;
 z-index:1;
-margin-top:40px;
+margin-top:49px;
 
 }
 .banner li{
@@ -311,6 +311,36 @@ a:active {
 	z-index: 7;
 	visibility: hidden;
 }
+audio{
+	filter:alpha(Opacity=80);
+	opacity: 0.78;
+	position:absolute;
+	left:50%;margin-left:-490px;
+	width:980px; 
+	height:40px;
+}
+player{
+	border-top:1px solid #01B1E6;
+	position:absolute;
+	left:50%;
+	margin-left:-490px;
+	top:40px;
+	width:980px;
+	height:49px; 
+	background-color:#000000;
+	filter:alpha(Opacity=80); 
+	opacity: 0.55;
+}
+#order{
+    border: 1px solid #01B1E6;
+    display: block; 
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -28px;
+    margin-top: -13px;
+}
 </style>
 </head>
 
@@ -372,10 +402,10 @@ a:active {
     </ul>
 </div>
 <div class="scroll_top" id="player">
-<div class='audio'><audio style="filter:alpha(Opacity=80); opacity: 0.78;position:absolute;left:50%;margin-left:-490px;width:980px; height:40px" id="aud" controls src="music/brain-dead.mp3" autoplay></audio>    </div>
-<div style="border-top:1px solid #01B1E6;position:absolute;left:50%;margin-left:-490px;top:40px;width:980px; height:40px; background-color:#000000;filter:alpha(Opacity=80); opacity: 0.55;">
+<div class='audio'><audio id="aud" controls src="music/brain-dead.mp3" autoplay></audio>    </div>
+<div class = "player">
 	<div style="top:-6px;position:absolute;left:27%;width:40px;"><a id="btnPre" href=""><h1>&lt;</h1></a></div>
-    <a id="order" href="" style="border:1px solid #01B1E6;display:block; width:80px;position:absolute;left:50%;top:50%;margin-left:-28px;margin-top:-13px;" >Order</a>
+    <a id="order" href="">Order</a>
     <div style="top:-6px;position:absolute;left:70%;width:40px;"><a id="btnNext" href=""><h1>&gt;</h1></a></div>
 </div>
 </div>
